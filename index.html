@@ -17,24 +17,24 @@
        ============================================================ -->
 
   <!-- 1. Fontes da sua carta (Google Fonts) -->
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=...&display=swap"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Karla:wght@400;700&display=swap">
 
   <!-- 2. Tokens da sua carta -->
   <style type="text/tailwindcss">
     @theme {
       /* Os três hex vêm da sua carta. Decida qual é fundo, qual é tinta e qual é destaque. */
-      --color-marca-50:  #FFFFFF;   /* fundo    — TROQUE */
-      --color-marca-900: #000000;   /* tinta    — TROQUE */
-      --color-marca-500: #FF00FF;   /* destaque — TROQUE */
+      --color-marca-50:  #1B1F24;
+      --color-marca-900: #DCE3E8;
+      --color-marca-500: #6C8EA4;
 
       /* O par tipográfico da sua carta. */
-      --font-display: system-ui, sans-serif;   /* TROQUE */
-      --font-corpo:   system-ui, sans-serif;   /* TROQUE */
+      --font-display: "Lora", sans-serif;
+      --font-corpo:   "Karla", sans-serif;
 
       /* O raio de canto da sua carta. */
-      --radius-card: 0px;            /* TROQUE */
+      --radius-card: 16px;
     }
   </style>
 
@@ -44,7 +44,7 @@
        ============================================================ -->
 </head>
 
-<body>
+<body class="min-h-screen bg-marca-50 font-corpo text-marca-900 antialiased">
 
   <header id="topo">
     <a href="#hero">Nome do Evento</a>
@@ -58,43 +58,43 @@
     <a href="#">Garantir ingresso</a>
   </header>
 
-  <main>
+  <main class="border-y border-marca-900/40">
 
-    <section id="hero">
-      <p>3ª edição</p>
-      <h1>Nome do Evento</h1>
-      <p>Uma frase que diz o que acontece, para quem é e por que vale a pena atravessar a cidade para ir.</p>
-      <div>
-        <a href="#">Garantir ingresso</a>
-        <a href="#rodape">Como chegar</a>
+    <section id="hero" class="mx-auto max-w-6xl px-6 py-16 md:py-24 lg:py-28">
+      <p class="text-sm font-bold uppercase tracking-widest text-marca-500">3ª edição</p>
+      <h1 class="mt-4 font-display text-5xl font-bold md:text-7xl">Nome do Evento</h1>
+      <p class="mt-5 max-w-2xl text-lg leading-relaxed text-marca-900/80">Uma frase que diz o que acontece, para quem é e por que vale a pena atravessar a cidade para ir.</p>
+      <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+        <a class="rounded-card bg-marca-500 px-6 py-3 text-center font-bold uppercase tracking-wider text-marca-50 hover:bg-marca-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-marca-900" href="#">Garantir ingresso</a>
+        <a class="rounded-card border border-marca-900 px-6 py-3 text-center font-bold uppercase tracking-wider hover:bg-marca-900 hover:text-marca-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-marca-900" href="#rodape">Como chegar</a>
       </div>
-      <dl>
-        <div>
-          <dt>Data</dt>
-          <dd>14 de novembro de 2026</dd>
+      <dl class="mt-12 grid gap-8 border-t border-marca-900/40 pt-8 md:grid-cols-3">
+        <div class="rounded-card">
+          <dt class="text-xs font-bold uppercase tracking-widest text-marca-500">Data</dt>
+          <dd class="mt-2 font-display text-lg">14 de novembro de 2026</dd>
         </div>
-        <div>
-          <dt>Local</dt>
-          <dd>Galpão da Vila, São Paulo</dd>
+        <div class="rounded-card">
+          <dt class="text-xs font-bold uppercase tracking-widest text-marca-500">Local</dt>
+          <dd class="mt-2 font-display text-lg">Galpão da Vila, São Paulo</dd>
         </div>
-        <div>
-          <dt>Ingressos</dt>
-          <dd>a partir de R$ 40</dd>
+        <div class="rounded-card">
+          <dt class="text-xs font-bold uppercase tracking-widest text-marca-500">Ingressos</dt>
+          <dd class="mt-2 font-display text-lg">a partir de R$ 40</dd>
         </div>
       </dl>
     </section>
   </main>
 
-  <footer id="rodape">
-    <p>Nome do Evento</p>
-    <nav aria-label="Rodapé">
-      <ul>
-        <li><a href="#">Ingressos</a></li>
-        <li><a href="#">Imprensa</a></li>
-        <li><a href="#topo">Voltar ao topo</a></li>
+  <footer id="rodape" class="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-10 md:flex-row md:items-center md:justify-between">
+    <p class="font-display text-xl font-bold">Nome do Evento</p>
+    <nav aria-label="Rodapé" class="md:order-none">
+      <ul class="flex flex-wrap gap-x-6 gap-y-3 text-sm font-bold uppercase tracking-wider">
+        <li><a class="hover:text-marca-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-marca-900" href="#">Ingressos</a></li>
+        <li><a class="hover:text-marca-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-marca-900" href="#">Imprensa</a></li>
+        <li><a class="hover:text-marca-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-marca-900" href="#topo">Voltar ao topo</a></li>
       </ul>
     </nav>
-    <p>Realização independente. São Paulo, 2026.</p>
+    <p class="text-sm text-marca-900/70">Realização independente. São Paulo, 2026.</p>
   </footer>
 
 </body>
