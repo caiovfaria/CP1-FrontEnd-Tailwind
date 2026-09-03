@@ -1,6 +1,6 @@
 RM: 570634
 
-Publicado em: PENDENTE — adicionar o endereço após a publicação no Cloudflare Pages
+Publicado em: https://cp1-frontend-tailwind.caiovfaria07.workers.dev
 
 Carta: 23 · Bruma
 
